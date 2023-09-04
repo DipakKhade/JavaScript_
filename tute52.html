@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div class="conatiner">This is a container</div>
+  </body>
+
+  <script>
+    // Synchronous Programming
+
+    // let name=prompt('What is your name')
+    // console.log(name)
+
+    // Asynochoroonus Programming
+
+    console.log("Start");
+
+    setTimeout(() => {
+      console.log("This will be run in 3 seconds");
+    }, 3000);
+
+    console.log("End");
+
+    function loadscript(src,callback){
+        let script=document.createElement('script')
+        script.src=src
+        script.onload=()=>{
+            document.head.append(script)
+        }
+    }
+
+    function myalert(){
+        alert('This is a callback')
+    }
+
+    loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz',myalert)
+
+  </script>
+</html>

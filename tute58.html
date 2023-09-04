@@ -1,0 +1,59 @@
+<!-- The Promise API  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>The Promise API </h3>
+</body>
+
+<script>
+
+    let p1=new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log('promise 1')
+            resolve(1)
+        }, 1000);
+    })
+    let p2=new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log('promise 2')
+            resolve(2)
+        }, 2000);
+    })
+    let p3=new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log('promise 3')
+            resolve(3)
+        }, 3000);
+    })
+
+    // Promise.all
+
+    let new_promise=Promise.all([p1,p2,p3])
+
+    new_promise.then((value)=>{
+        console.log(value)
+    })
+
+    // promise.allSettled
+    let new_promise2=Promise.allSettled([p1,p2,p3])
+
+    new_promise2.then((value)=>{
+        console.log(value)
+    })
+    
+
+    // promise.any
+    // promise.race
+
+    // promise.resolve
+
+     
+    
+</script>
+</html>

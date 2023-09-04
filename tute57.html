@@ -1,0 +1,39 @@
+
+<!-- Attaching Multiple Handlers to a Promise  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Attaching Multiple Handlers to a Promise </h3>
+
+
+</body>
+
+<script>
+
+let p1=new Promise((resolve,reject)=>{
+    console.log('This promise is started resolving')
+    setTimeout(() => {
+        resolve(7)
+        console.log('promise is resolved in 3 sec with the vlaue 7')
+    }, 3000);
+})
+
+p1.then(()=>{
+    console.log('i am the 1st handler')
+})
+
+p1.then(()=>{
+    console.log('This is a second handler')
+})
+
+
+
+</script>
+</html>

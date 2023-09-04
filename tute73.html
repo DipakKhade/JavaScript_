@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        border: 2px solid black;
+        width: 80%;
+        height: 700px;
+        margin-left: 150px;
+        background-color: aquamarine;
+      }
+      .settodo {
+        display: flex;
+        
+      }
+      .settodo input,button {
+       display: flex;
+       flex-direction: row;
+        margin: 23px 23px 23px 23px;
+      }
+
+      .settodo i{
+        margin-left: 244px;
+        padding-top: 23px;
+      }
+
+      #showtodo{
+        margin-left: 214px;
+      }
+
+      button{
+        color: rgb(1, 6, 11);
+        background-color: rgb(246, 243, 243);
+        cursor: pointer;
+      }
+
+      #deltodo{
+        margin-left: 214px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Hey Your Todo's are here</h2>
+
+      <div class="settodo">
+        <i>Set TOdo</i>
+        <input id="input" type="text" /> 
+        <div id="btn"><button>Submit</button></div>
+      </div>
+
+      <div id="deltodo">
+        <button>Delete TOdo</button>
+      </div>
+
+      <div id="showtodo">
+        <button>See All TOdo's</button>
+      </div>
+
+      <div id="showing_todo"></div>
+     
+    </div>
+  </body>
+
+
+  <script>
+
+const flow=()=>{
+
+
+// for submiting the todo's
+    let submit=document.getElementById('btn')
+
+    submit.addEventListener('click',()=>{
+        localStorage.setItem(input.value,'task')
+        console.log(localStorage)
+    })
+
+    // for deleting the todo's
+
+    let delete_=document.getElementById('deltodo')
+    delete_.addEventListener('click',()=>{
+        localStorage.clear()
+        console.log(localStorage)
+        showing_todo=document.getElementById('showing_todo')
+        showing_todo.innerHTML=""
+
+    })
+
+
+    
+
+
+}
+
+flow()
+
+// showing the todo's
+
+let show=document.getElementById('showtodo')
+    show.addEventListener('click',()=>{
+      // showing_todo.innerHTML=localStorage.getItem(input.value)
+      
+      let i=0
+      while( i <localStorage.length){
+          showing_todo=document.getElementById('showing_todo')
+          showing_todo.innerHTML=localStorage.key('task')
+          i=i+1
+        }
+    })
+  </script>
+</html>

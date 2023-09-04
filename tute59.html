@@ -1,0 +1,51 @@
+<!-- Async/Await in JavaScript  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    async function dipak(){
+
+        let puneWhether=new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                console.log('We are showimg you the Whether report of Pune')
+                resolve(24)
+            }, 2000);
+
+        })   
+        
+        let mumbaiWhether=new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                console.log('We are showimg you the Whether report of mumbai')
+                resolve(21)
+            }, 4000);
+
+        })   
+        
+
+        // awating 
+        let pune=await puneWhether
+        let mumbai=await mumbaiWhether
+
+        return [pune , mumbai]
+        }
+
+
+        dipak().then((value)=>{
+            console.log(value)
+        })
+        
+
+        let a=dipak()
+        console.log(a)
+</script>
+</html>

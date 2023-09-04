@@ -1,0 +1,56 @@
+<!-- JavaScript Chapter 9 - Practice Set  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+// Problem
+/*
+    const loadscript= async(src)=>{
+        return new Promise=((resolve,reject)=>{
+
+            let script=document.createElement("script")
+            script.src=src
+            script.onload=()=>{
+                resolve(src)
+            }
+            document.head.append(script)
+        })
+    }
+
+
+    const load=async()=>{
+        let a =await loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js")
+        console.log(a)
+
+    }
+
+    load()
+
+    */
+
+// Problem 3
+
+let p= new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        console.log('The Promise is rejected with value 7')
+        reject(7)
+    }, 3000);
+})
+
+
+
+
+
+</script>
+</html>
+

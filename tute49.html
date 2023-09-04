@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set</title>
+
+    <style>
+
+        #bulb{
+            height: 100px;
+            width: 30%;
+            background-color: yellow;
+
+        }
+        .bulb{
+            background-color: aliceblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <button class="btn1">btn 1</button>
+        <button class="btn2">btn 2</button>
+        <button class="btn3">btn 3</button>
+        <button class="btn4">btn 4</button>
+    </div>
+
+    <h3>My favourite websites are :</h3>
+    <div class="links"></div>
+
+    <div id="bulb" class="bulb">
+        This  is a bulb
+    </div>
+    
+</body>
+
+
+<script>
+    // problem 1
+
+    fun1=()=>{
+        console.log('You clicked on btn 1')
+    }
+    fun2=()=>{
+        console.log('You clicked on btn 2')
+    }
+    fun3=()=>{
+        console.log('You clicked on btn 3')
+    }
+    fun4=()=>{
+        console.log('You clicked on btn 4')
+    }
+
+    let btn1=document.getElementsByClassName('btn1')[0]
+    btn1.addEventListener('click',fun1)
+
+    let btn2=document.getElementsByClassName('btn2')[0]
+    // console.log(btn2)
+    btn2.addEventListener('click',fun2)
+   
+    let btn3=document.getElementsByClassName('btn3')[0]
+    btn3.addEventListener('click',fun3)
+
+    let btn4=document.getElementsByClassName('btn4')[0]
+    btn4.addEventListener('click',fun4)
+
+// problem 2
+// let f=prompt('enter the ukl of ur favourtie website')
+links=document.getElementsByClassName("links")[0]
+console.log(links)
+
+// links.outerHTML=`<a href="${f}">Classrome</a>`
+
+let api='https://jsonplaceholder.typicode.com/todos/1'
+
+setTimeout(() => {
+    console.log(fetch(api))
+}, 2000);
+
+
+
+setInterval(async function(){
+    document.querySelector('#bulb').classList.toggle('bulb')
+},300)
+
+
+
+</script>
+</html>
