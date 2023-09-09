@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>overwriting the constructor methods</h3>
+</body>
+
+<script>
+
+
+    class Employee{
+        constructor(name){
+            console.log('This is constructor of a parent class')
+            this.name=name
+        }
+    }
+
+    class Programmer extends Employee{
+        // constructor(...args){               //this constructor is automatically created
+        //     super(...args)
+        // }
+
+        // to overwrite the parent class constructor
+        constructor(name,language){
+            super(name)                           //super keyword should be above this.method()
+            this.language=language 
+        }
+        programmer_method(){
+            console.log(`This is a programmer method`)
+        }
+    }
+
+
+    let pro_1=new Programmer('Dipak','python ,javascript,R')
+
+    pro_1.programmer_method()
+    console.log(pro_1.language)
+
+</script>
+</html>

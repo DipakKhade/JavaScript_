@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>inheritance and extends keyword</h3>
+</body>
+
+<script>
+
+class Empolyee{
+
+// the constructor
+constructor(name,id,qua) {
+    this.name=name
+    this.id=id
+    this.qua=qua
+}
+
+// another methods
+
+show_info(){
+    console.log(`${this.name} has id ${this.id} and qualification is ${this.qua} `)
+}
+
+}
+
+
+// inherting the Employee class
+
+
+class Boss extends Empolyee{
+
+    manage(){
+        console.log('hey i am the current boss and i will set target for all Employees')
+    }
+}
+
+
+new_boss=new Boss('Diapk',272,'phd')
+new_boss.show_info()
+new_boss.manage()
+
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h3>constructor in javascript</h3>
+</body>
+
+<script>
+
+    class Empolyee{
+
+        // the constructor
+        constructor(name,id,qua) {
+            this.name=name
+            this.id=id
+            this.qua=qua
+        }
+
+        // another methods
+
+        show_info(){
+            console.log(`${this.name} has id ${this.id} and qualification is ${this.qua} `)
+        }
+
+    }
+
+    let new_employee= new Empolyee('Dipak',2203256,'MSc')
+
+    new_employee.show_info()
+
+</script>
+</html>

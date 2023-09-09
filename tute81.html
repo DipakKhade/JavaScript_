@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>static methods</h4>
+</body>
+
+<script>
+
+class MyClass {
+  // Constructor
+  constructor(name) {
+    this.name = name;
+  }
+
+  // Instance method
+  sayHello() {
+    console.log(`Hello, ${this.name}!`);
+  }
+
+  // Static method
+  static staticMethod() {
+    console.log('This is a static method.');
+  }
+}
+
+// Create an instance of MyClass
+const myInstance = new MyClass('John');
+
+// Call an instance method
+myInstance.sayHello(); // Outputs: Hello, John!
+
+// Call a static method
+MyClass.staticMethod(); // Outputs: This is a static method.
+
+</script>
+</html>

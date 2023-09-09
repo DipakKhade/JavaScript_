@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>Destructuring asignment and Spread operator</h4>
+  </body>
+
+  <script>
+    //    Destructuring Assgiment
+
+    let arr1=[2,23,24]
+    let [a,b,c]=arr1
+    console.log(a,b,c)
+
+    let arr2=[43,423,98]
+    let[p]=arr2
+    console.log(p)
+
+    let arr3=[432,432,42335,123,987]
+    let [e,,f, ...rest]=arr3          //2nd value is skipped
+    console.log(e,f,rest)
+
+    let arr4=[979,9298,198,1,2,3,4]
+    let [l,...rest1]=arr4
+    console.log(l,rest1)
+
+
+
+    //Spread Operator
+
+    //unpacking the elements
+
+    let k=[21,98,75,65]
+    let obj={...k}
+    console.log(obj)
+
+    let ele=[23,9,78,45]
+
+    function sum(n1,n2,n3,n4){
+        return n1+n2+n3+n4
+    }
+
+    console.log(sum(...ele))
+
+    
+  </script>
+</html>

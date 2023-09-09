@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>js chapter 11 practice set </h3>
+</body>
+
+<script>
+
+    class complex_numbers{
+        constructor(real,imaginary){
+            this.real=real
+            this.imaginary=imaginary
+        }
+        
+        //addition of two imaginary numbers
+        add(num){
+            this.real=this.real + num.real
+            this.imaginary=this.imaginary + num.imaginary
+        }
+        
+        
+    }
+
+
+    let cn=new complex_numbers(32,8)
+    console.log(cn.real)
+    console.log(cn.imaginary)
+
+    //adding two complex numbers
+    let a=new complex_numbers(2,4)
+    let b=new complex_numbers(4,6)
+
+    let result=a.add(b)
+
+    console.log(`${a.real}+${a.imaginary}i`)
+
+
+    class Human{
+        constructor(name,){
+            this.name=name
+            
+        }
+
+
+    }
+
+    class students extends Human{
+        constructor(std){
+            super()
+            this.std=std
+
+        }
+    }
+
+    let new_student=new students('Dipak','MSC')
+
+    console.log(new_student.name)
+    new_student.name='GAURAV'
+    console.log(new_student.name)
+    console.log(new_student.std)
+
+</script>
+</html>

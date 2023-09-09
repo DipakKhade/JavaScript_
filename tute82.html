@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>getters and setters </h3>
+</body>
+
+<script>
+
+    class Employee{
+        constructor(name){
+            this._name=name
+        }
+
+        // getter 
+        get name(){
+            return this._name
+        }
+
+        set name(newName){
+              return this.name=newName
+            
+        }
+    }
+
+    let new_employee=new Employee('Dipak')
+    // getting a name
+    console.log(new_employee.name)
+
+    // setting a name
+
+    console.log(new_employee.newName='gaurav')
+
+    // instanof operator
+
+    console.log(new_employee instanceof Employee)
+    
+    let a='Gaurav'
+    console.log(a instanceof Employee)
+
+
+    class Developer extends Employee{
+        constructor(role,language){
+            super()
+            this.role=role
+            this.language=language
+        }
+    }
+
+    let new_developer=new Developer('web-dev','React-js')
+
+    console.log(new_developer instanceof Employee)
+
+</script>
+</html>
